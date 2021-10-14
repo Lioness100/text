@@ -1,6 +1,3 @@
-## ⚡ > 💎 Itsuki Nakano Discord Bot
+## ⚡ Itsuki Nakano Bot (Version 0.9.3)
 
-Behold, Itsuki Nakano Discord Bot, Made In Typescript. All New Functionality, (and better than the miku nakano bot.) Coming in with many functions, such as suspicion, auto kick, anti raid(soon to come) anti spam(soon to come) etc... Please Do Enjoy This Discord Bot, Licensed By Me (oexfcnet)
-
----
-© 2021 Itsuki Bot LLC
+Please Do Not Share This Code ***ANYWHERE***, as it's private code , and you've been given special access.
