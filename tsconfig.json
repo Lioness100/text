@@ -3,8 +3,17 @@
 	"compilerOptions": {
 		"rootDir": "src",
 		"outDir": "dist",
-		"tsBuildInfoFile": "dist/.tsbuildinfo"
+		"tsBuildInfoFile": "dist/.tsbuildinfo",
+		"baseUrl": ".",
+		"paths": {
+			"#utils/*": ["lib/util/*"],
+			"#lib/*": ["lib/*"],
+			"#root/*": ["*"],
+			"#scripts/*": ["scripts/*"],
+		},
+		"composite": true
 	},
 	"include": ["src"],
+	"exclude": ["node_modules"],
 	"experimentalDecorators": true,
 }

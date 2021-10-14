@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-require("./lib/setup");
+require("#lib/setup");
 const framework_1 = require("@sapphire/framework");
 const client = new framework_1.SapphireClient({
     defaultPrefix: ',',

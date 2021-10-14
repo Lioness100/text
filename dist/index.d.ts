@@ -1,2 +1,2 @@
-import './lib/setup';
+import '#lib/setup';
 //# sourceMappingURL=index.d.ts.map
