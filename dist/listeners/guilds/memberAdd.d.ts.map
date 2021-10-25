@@ -1,0 +1,1 @@
+{"version":3,"file":"memberAdd.d.ts","sourceRoot":"","sources":["../../../src/listeners/guilds/memberAdd.ts"],"names":[],"mappings":"AACA,OAAO,EAAE,QAAQ,EAA2B,MAAM,qBAAqB,CAAC;AACxE,OAAO,KAAK,EAAE,WAAW,EAAE,MAAM,YAAY,CAAC;AAM9C,qBACa,YAAa,SAAQ,QAAQ;IAC5B,GAAG,CAAC,QAAQ,EAAE,WAAW,EAAE,IAAI,EAAE,WAAW;CAOzD"}

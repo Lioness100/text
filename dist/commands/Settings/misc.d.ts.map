@@ -1,0 +1,1 @@
+{"version":3,"file":"misc.d.ts","sourceRoot":"","sources":["../../../src/commands/Settings/misc.ts"],"names":[],"mappings":"AACA,OAAO,EAAE,IAAI,EAAE,OAAO,EAAkB,MAAM,qBAAqB,CAAC;AACpE,OAAO,KAAK,EAAE,OAAO,EAAE,MAAM,YAAY,CAAC;AAI1C,qBAMa,WAAY,SAAQ,OAAO;IAC1B,UAAU,CAAC,OAAO,EAAE,OAAO,EAAE,IAAI,EAAE,IAAI;CA2BpD"}

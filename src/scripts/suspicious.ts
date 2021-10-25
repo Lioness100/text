@@ -1,13 +1,13 @@
-import type { User } from 'discord.js'
-const date = new Date();
+import type { GuildMember } from 'discord.js'
 
-export async function Sus(user: User){
-    if(user.avatarURL() == null){
+export async function Sus(member: GuildMember){
+    if(member.user.avatarURL() == null){
         return true;
     }
 
-    if(Date.now() - user.createdAt.getDay() > date.getDay()){
-        return true
+    if(Date.now() - member.user.createdTimestamp <= 259200000){
+        return true;
     }
+
     return false;
 }

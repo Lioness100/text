@@ -1,3 +1,3 @@
-import type { User } from 'discord.js';
-export declare function Sus(user: User): Promise<boolean>;
+import type { GuildMember } from 'discord.js';
+export declare function Sus(member: GuildMember): Promise<boolean>;
 //# sourceMappingURL=suspicious.d.ts.map

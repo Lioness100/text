@@ -7,7 +7,7 @@ const framework_1 = require("@sapphire/framework");
 const plugin_editable_commands_1 = require("@sapphire/plugin-editable-commands");
 const discord_js_1 = require("discord.js");
 let UserCommand = class UserCommand extends framework_1.Command {
-    async run(message) {
+    async messageRun(message) {
         const daub = new discord_js_1.MessageEmbed()
             .setTitle("Hello!")
             .setDescription(`The Ping Is Immaculate! Coming In At ${this.container.client.ws.ping}`);

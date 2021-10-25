@@ -1,1 +1,1 @@
-{"version":3,"file":"suspicious.d.ts","sourceRoot":"","sources":["../../src/scripts/suspicious.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,IAAI,EAAE,MAAM,YAAY,CAAA;AAGtC,wBAAsB,GAAG,CAAC,IAAI,EAAE,IAAI,oBASnC"}
+{"version":3,"file":"suspicious.d.ts","sourceRoot":"","sources":["../../src/scripts/suspicious.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,WAAW,EAAE,MAAM,YAAY,CAAA;AAE7C,wBAAsB,GAAG,CAAC,MAAM,EAAE,WAAW,oBAU5C"}

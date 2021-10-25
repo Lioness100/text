@@ -9,7 +9,7 @@ import { MessageEmbed } from 'discord.js';
 	description: 'ping pong'
 })
 export class UserCommand extends Command {
-	public async run(message: Message) {
+	public async messageRun(message: Message) {
 
 		const daub = new MessageEmbed()
 		.setTitle("Hello!")
