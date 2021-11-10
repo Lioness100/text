@@ -1,6 +1,6 @@
 import { Args, Command } from '@sapphire/framework';
 import type { Message } from 'discord.js';
 export declare class UserCommand extends Command {
-    messageRun(message: Message, args: Args): Promise<Message | undefined>;
+    messageRun(message: Message, args: Args): Promise<Message<boolean> | undefined>;
 }
-//# sourceMappingURL=misc.d.ts.map
+//# sourceMappingURL=eclectic.d.ts.map

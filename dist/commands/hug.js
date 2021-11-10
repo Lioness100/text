@@ -9,7 +9,7 @@ const discord_js_1 = require("discord.js");
 const axios_1 = (0, tslib_1.__importDefault)(require("axios"));
 let UserCommand = class UserCommand extends framework_1.Command {
     async messageRun(message, args) {
-        const user = await args.rest('user').catch(() => undefined);
+        const user = await args.rest('member').catch(() => undefined);
         if (user == null) {
             return;
         }

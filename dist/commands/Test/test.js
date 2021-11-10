@@ -10,7 +10,7 @@ const suspicious_1 = require("./../../scripts/suspicious");
 let UserCommand = class UserCommand extends framework_1.Command {
     async messageRun(message, args) {
         const member = await args.rest('member');
-        const result = await (0, suspicious_1.Sus)(member);
+        const result = await (0, suspicious_1.sus)(member);
         const daub = new discord_js_1.MessageEmbed()
             .setTitle("Heres The Results On The Script `suspicious.ts`")
             .setDescription(`Is This User Sus: ${result}`);

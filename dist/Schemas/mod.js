@@ -26,15 +26,15 @@ class Mod {
     }
 }
 (0, tslib_1.__decorate)([
-    (0, typegoose_1.prop)(),
+    (0, typegoose_1.prop)({ default: 0 }),
     (0, tslib_1.__metadata)("design:type", String)
 ], Mod.prototype, "_id", void 0);
 (0, tslib_1.__decorate)([
-    (0, typegoose_1.prop)(),
+    (0, typegoose_1.prop)({ default: 0 }),
     (0, tslib_1.__metadata)("design:type", String)
 ], Mod.prototype, "_modid", void 0);
 (0, tslib_1.__decorate)([
-    (0, typegoose_1.prop)(),
+    (0, typegoose_1.prop)({ default: 0 }),
     (0, tslib_1.__metadata)("design:type", String)
 ], Mod.prototype, "_adminid", void 0);
 exports.ModModel = (0, typegoose_1.getModelForClass)(Mod);

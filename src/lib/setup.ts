@@ -1,4 +1,4 @@
-// Unless explicitly defined, set NODE_ENV as development:
+    // Unless explicitly defined, set NODE_ENV as development:
 process.env.NODE_ENV ??= 'development';
 
 import 'reflect-metadata';

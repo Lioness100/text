@@ -12,7 +12,7 @@ import get from 'axios';
 export class UserCommand extends Command {
 	public async messageRun(message: Message, args: Args) {
 
-        const user = await args.rest( 'user' ).catch( () => undefined)
+        const user = await args.rest( 'member' ).catch( () => undefined)
 
         if(user == null){
             return;

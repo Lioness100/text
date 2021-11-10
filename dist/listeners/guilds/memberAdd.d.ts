@@ -1,6 +1,6 @@
-import { Listener } from '@sapphire/framework';
-import type { GuildMember } from 'discord.js';
-export declare class UserListener extends Listener {
-    run(previous: GuildMember, next: GuildMember): Promise<void>;
+import type { GuildMember } from "discord.js";
+import { Listener, Events } from "@sapphire/framework";
+export declare class UserListener extends Listener<typeof Events.GuildMemberAdd> {
+    run(member: GuildMember): Promise<void>;
 }
-//# sourceMappingURL=memberAdd.d.ts.map
+//# sourceMappingURL=memberadd.d.ts.map

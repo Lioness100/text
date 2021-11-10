@@ -76,31 +76,31 @@ class MoonGate {
     (0, tslib_1.__metadata)("design:type", Boolean)
 ], MoonGate.prototype, "_enabled", void 0);
 (0, tslib_1.__decorate)([
-    (0, typegoose_1.prop)(),
+    (0, typegoose_1.prop)({ default: true }),
     (0, tslib_1.__metadata)("design:type", Boolean)
 ], MoonGate.prototype, "_DM", void 0);
 (0, tslib_1.__decorate)([
-    (0, typegoose_1.prop)(),
+    (0, typegoose_1.prop)({ default: true }),
     (0, tslib_1.__metadata)("design:type", Boolean)
 ], MoonGate.prototype, "_BAF", void 0);
 (0, tslib_1.__decorate)([
-    (0, typegoose_1.prop)(),
+    (0, typegoose_1.prop)({ default: true }),
     (0, tslib_1.__metadata)("design:type", Boolean)
 ], MoonGate.prototype, "_sus", void 0);
 (0, tslib_1.__decorate)([
-    (0, typegoose_1.prop)(),
+    (0, typegoose_1.prop)({ default: true }),
     (0, tslib_1.__metadata)("design:type", Boolean)
 ], MoonGate.prototype, "_advert", void 0);
 (0, tslib_1.__decorate)([
-    (0, typegoose_1.prop)(),
+    (0, typegoose_1.prop)({ default: true }),
     (0, tslib_1.__metadata)("design:type", Boolean)
 ], MoonGate.prototype, "_UBF", void 0);
 (0, tslib_1.__decorate)([
-    (0, typegoose_1.prop)(),
+    (0, typegoose_1.prop)({ default: true }),
     (0, tslib_1.__metadata)("design:type", Boolean)
 ], MoonGate.prototype, "_noAv", void 0);
 (0, tslib_1.__decorate)([
-    (0, typegoose_1.prop)(),
+    (0, typegoose_1.prop)({ default: true }),
     (0, tslib_1.__metadata)("design:type", Boolean)
 ], MoonGate.prototype, "_reqAge", void 0);
 (0, tslib_1.__decorate)([

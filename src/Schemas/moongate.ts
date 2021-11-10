@@ -6,31 +6,31 @@ class MoonGate {
   _guildId!: Snowflake;
 
   @prop()
-  _enabled!: Boolean
+  _enabled!: boolean
 
-  @prop()
-  _DM!: Boolean;
+  @prop({default: true})
+  _DM!: boolean;
 
-  @prop()
-  _BAF!: Boolean;
+  @prop({default: true})
+  _BAF!: boolean;
 
-  @prop()
-  _sus!: Boolean;
+  @prop({default: true})
+  _sus!: boolean;
 
-  @prop()
-  _advert!: Boolean;
+  @prop({default: true})
+  _advert!: boolean;
 
-  @prop()
-  _UBF!: Boolean;
+  @prop({default: true})
+  _UBF!: boolean;
   
-  @prop()
-  _noAv!: Boolean;
+  @prop({default: true})
+  _noAv!: boolean;
 
-  @prop()
-  _reqAge!: Boolean;
+  @prop({default: true})
+  _reqAge!: boolean;
   
   @prop({unique: false})
-  _age!: Number;
+  _age!: number;
 }
 
 export const JoinGateModel = getModelForClass(MoonGate);

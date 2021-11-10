@@ -14,7 +14,7 @@
 		},
 		"composite": true
 	},
-	"include": ["src"],
+	"include": ["src", "build.js"],
 	"exclude": ["node_modules"],
 	"experimentalDecorators": true,
 }

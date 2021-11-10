@@ -19,6 +19,7 @@ export class UserCommand extends Command {
        const member = await args.rest( 'member' ).catch( () => undefined)
 
         const guild = await ModModel.findOne({_id: `${message.guildId}`}).lean();
+        const cancel = this.container.client.emojis.cache.get('902377399746957402');
 
 
         const author = message.member;
@@ -73,6 +74,13 @@ export class UserCommand extends Command {
             })
 
         }
+
+            const embed = new MessageEmbed()
+            .setTitle("Unsuccessful Operation!")
+            .setDescription(`${cancel}Only Admins (Threshold 3 - 5) Can Use This Command.`)
+
+            return message.reply({embeds: [embed] });
+
 
 
 	}

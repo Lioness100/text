@@ -24,7 +24,7 @@ class Guild {
     (0, tslib_1.__metadata)("design:type", String)
 ], Guild.prototype, "_id", void 0);
 (0, tslib_1.__decorate)([
-    (0, typegoose_1.prop)(),
+    (0, typegoose_1.prop)({ default: 'i!' }),
     (0, tslib_1.__metadata)("design:type", String)
 ], Guild.prototype, "prefix", void 0);
 exports.GuildModel = (0, typegoose_1.getModelForClass)(Guild);

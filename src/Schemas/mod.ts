@@ -2,13 +2,13 @@ import type { Snowflake } from 'discord.js'
 import { getModelForClass, prop } from '@typegoose/typegoose';
 
 class Mod {
-  @prop()
+  @prop({default: 0})
   _id!: Snowflake;
   
-  @prop()
+  @prop({default: 0})
   _modid!: Snowflake;
 
-  @prop()
+  @prop({default: 0})
   _adminid!: Snowflake;
 }
 

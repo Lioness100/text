@@ -6,19 +6,19 @@ class Case {
   _guildId!: Snowflake;
   
   @prop({unique: true})
-  _caseid!: String;
+  _caseid!: string;
   
   @prop({unique: false})
-  _modid!: String;
+  _modid!: string;
 
   @prop({unique: false})
-  _targetId!: String;
+  _targetId!: string;
 
   @prop({unique: false})
-  _reason!: String;
+  _reason!: string;
 
   @prop({unique: false})
-  _type!: String;
+  _type!: string;
 }
 
 export const CaseModel = getModelForClass(Case);

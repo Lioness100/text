@@ -4,11 +4,27 @@ require("#lib/setup");
 const framework_1 = require("@sapphire/framework");
 const mongoose = require('mongoose');
 const config_1 = require("./Schemas/config");
+require("@sapphire/plugin-api/register");
 const client = new framework_1.SapphireClient({
     fetchPrefix: async (message) => {
         const guild = await config_1.GuildModel.findOne({ _id: `${message.guildId}` }).lean();
         const prefix = guild?.prefix ?? 'i!';
         return prefix;
+    },
+    api: {
+        auth: {
+            id: '824331917402832946',
+            secret: 'zLufWOReeG-xTLurtkwIXM-xOrN4ZVff',
+            cookie: 'ITSUKI_AUTH',
+            redirect: 'itsuki.dev/home',
+            scopes: ['identity'],
+            transformers: []
+        },
+        prefix: '',
+        origin: '*',
+        listenOptions: {
+            port: 4000
+        },
     },
     regexPrefix: /^(hey +)?bot[,! ]/i,
     caseInsensitiveCommands: true,
@@ -26,7 +42,7 @@ const client = new framework_1.SapphireClient({
         'GUILD_MESSAGE_REACTIONS',
         'DIRECT_MESSAGES',
         'DIRECT_MESSAGE_REACTIONS'
-    ]
+    ],
 });
 const main = async () => {
     try {
@@ -34,7 +50,7 @@ const main = async () => {
         await client.login();
         client.logger.info('logged in');
         await mongoose.connect(process.env.mongo);
-        client.logger.info("MongoDB Connected.");
+        client.logger.info('MongoDB Connected!');
     }
     catch (error) {
         client.logger.fatal(error);

@@ -5,7 +5,7 @@ class Guild {
   @prop()
   _id!: Snowflake;
 
-  @prop()
+  @prop({default: 'i!'})
   prefix!: string;
 }
 
