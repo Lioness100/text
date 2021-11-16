@@ -1,1 +1,1 @@
-{"version":3,"file":"whois.d.ts","sourceRoot":"","sources":["../../src/routes/whois.ts"],"names":[],"mappings":"AACA,OAAO,EAAoC,KAAK,EAAgB,MAAM,sBAAsB,CAAC;AAE7F,qBACa,SAAU,SAAQ,KAAK;CA2BnC"}
+{"version":3,"file":"whois.d.ts","sourceRoot":"","sources":["../../src/routes/whois.ts"],"names":[],"mappings":"AACA,OAAO,EAAoC,KAAK,EAAgB,MAAM,sBAAsB,CAAC;AAE7F,qBACa,SAAU,SAAQ,KAAK;CA4BnC"}

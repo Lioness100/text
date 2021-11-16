@@ -1,0 +1,1 @@
+{"version":3,"file":"whois.d.ts","sourceRoot":"","sources":["../../../src/commands/General/whois.ts"],"names":[],"mappings":"AACA,OAAO,EAAE,OAAO,EAAkB,IAAI,EAAE,MAAM,qBAAqB,CAAC;AAEpE,OAAO,EAAa,OAAO,EAAE,MAAM,YAAY,CAAC;AAGhD,qBAOa,WAAY,SAAQ,OAAO;IAC1B,UAAU,CAAC,OAAO,EAAE,OAAO,EAAE,IAAI,EAAE,IAAI;CAqCpD"}

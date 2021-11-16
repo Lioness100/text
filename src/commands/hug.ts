@@ -19,24 +19,17 @@ export class UserCommand extends Command {
         }
 
 
-        await get("https://api.otakugifs.xyz/gif?reaction=kiss", {
+        const result = await get("http://localhost:4000/api/hug", {
             headers: {
-                'x-api-key': 'n2Th1GD7NbXOaY5yah5YPaqR4UqoPzbKEOt0MoJEMpBpRBFWrwnBybkbFNjP3pJOe9CvEwclwldtz2UC38Cict',
-                format: 'gif'
+                'x-key': '8513c62d-f384-4533-802f-b904886b5e6c'
             }
-        }).catch(() => {
-            const oops = new MessageEmbed()
-            .setTitle("Error!")
-            .setDescription("My API Key Has Expired, Please Wait For A Quick Patch Update.");
-
-            return message.reply({embeds: [oops] });
         });
 
         const embed = new MessageEmbed()
-        .setDescription('daubs')
+        .setDescription(`${message.author.username} Has Hugged ${user.user.username}`)
+        .setImage(`${result.data.msg}`)
+        .setFooter("Powered By ItsukiAPI")
 
-    
-        
 
         return reply(message, {embeds: [embed] });
 

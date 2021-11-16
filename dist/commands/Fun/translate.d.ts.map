@@ -1,0 +1,1 @@
+{"version":3,"file":"translate.d.ts","sourceRoot":"","sources":["../../../src/commands/Fun/translate.ts"],"names":[],"mappings":"AACA,OAAO,EAAE,OAAO,EAAkB,IAAI,EAAE,MAAM,qBAAqB,CAAC;AAEpE,OAAO,KAAK,EAAE,OAAO,EAAE,MAAM,YAAY,CAAC;AAI1C,qBAKa,WAAY,SAAQ,OAAO;IAC1B,UAAU,CAAC,OAAO,EAAE,OAAO,EAAE,IAAI,EAAE,IAAI;CAmCpD"}

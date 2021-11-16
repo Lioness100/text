@@ -6,7 +6,7 @@ const decorators_1 = require("@sapphire/decorators");
 const plugin_api_1 = require("@sapphire/plugin-api");
 let UserRoute = class UserRoute extends plugin_api_1.Route {
     async [plugin_api_1.methods.GET](_request, response) {
-        _request.params == { guild: '...', member: '...' };
+        _request.params == { guild: '?g', member: '?m' };
         const params = _request.params;
         if (params.guild == ':guild') {
             return response.json({ msg: "Please Provide A Valid Guild ID." });
@@ -15,6 +15,7 @@ let UserRoute = class UserRoute extends plugin_api_1.Route {
             return response.json({ msg: "Please Enter A Valid Member" });
         }
         const guild = await this.container.client.guilds.cache.get(`${params.guild}`);
+        console.log(params.guild);
         if (guild == undefined) {
             return response.json({ msg: "This Guild Cannot Be Found. Ensure The Bot Is Within That Guild." });
         }
@@ -25,7 +26,7 @@ let UserRoute = class UserRoute extends plugin_api_1.Route {
     }
 };
 UserRoute = (0, tslib_1.__decorate)([
-    (0, decorators_1.ApplyOptions)({ route: '/api/bot/guilds/:guild/members/:member' })
+    (0, decorators_1.ApplyOptions)({ route: '/api/bot/' })
 ], UserRoute);
 exports.UserRoute = UserRoute;
 //# sourceMappingURL=whois.js.map
