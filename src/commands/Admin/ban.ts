@@ -6,7 +6,6 @@ import { ModModel } from './../../Schemas/mod';
 import { CaseModel } from './../../Schemas/case';
 import uniqid from 'uniqid';
 
-
 @ApplyOptions<CommandOptions>({
 	name: 'ban',
     aliases: ['b'],

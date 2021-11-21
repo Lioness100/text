@@ -6,17 +6,18 @@ const mongoose = require('mongoose');
 const config_1 = require("./Schemas/config");
 require("@sapphire/plugin-api/register");
 const client = new framework_1.SapphireClient({
+    defaultPrefix: 'i!',
     fetchPrefix: async (message) => {
-        const guild = await config_1.GuildModel.findOne({ _id: `${message.guildId}` }).lean();
+        const guild = await config_1.GuildModel.findOne({ _id: message.guildId ?? '0' }).lean();
         const prefix = guild?.prefix ?? 'i!';
         return prefix;
     },
     api: {
         auth: {
-            id: '824331917402832946',
-            secret: 'zLufWOReeG-xTLurtkwIXM-xOrN4ZVff',
-            cookie: 'ITSUKI_AUTH',
-            redirect: 'itsuki.dev/home',
+            id: `${process.env.client_id}`,
+            secret: `${process.env.client_secret}`,
+            cookie: 'TEXT_AUTH',
+            redirect: 'textbot.ovh/dash',
             scopes: ['identity'],
             transformers: []
         },

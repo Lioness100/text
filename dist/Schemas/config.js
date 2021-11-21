@@ -17,6 +17,18 @@ class Guild {
             writable: true,
             value: void 0
         });
+        Object.defineProperty(this, "mutedId", {
+            enumerable: true,
+            configurable: true,
+            writable: true,
+            value: void 0
+        });
+        Object.defineProperty(this, "mainId", {
+            enumerable: true,
+            configurable: true,
+            writable: true,
+            value: void 0
+        });
     }
 }
 (0, tslib_1.__decorate)([
@@ -27,5 +39,13 @@ class Guild {
     (0, typegoose_1.prop)({ default: 'i!' }),
     (0, tslib_1.__metadata)("design:type", String)
 ], Guild.prototype, "prefix", void 0);
+(0, tslib_1.__decorate)([
+    (0, typegoose_1.prop)({ default: 0 }),
+    (0, tslib_1.__metadata)("design:type", String)
+], Guild.prototype, "mutedId", void 0);
+(0, tslib_1.__decorate)([
+    (0, typegoose_1.prop)({ default: 0 }),
+    (0, tslib_1.__metadata)("design:type", String)
+], Guild.prototype, "mainId", void 0);
 exports.GuildModel = (0, typegoose_1.getModelForClass)(Guild);
 //# sourceMappingURL=config.js.map

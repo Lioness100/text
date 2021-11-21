@@ -24,7 +24,7 @@ export class UserCommand extends Command {
             const embed = new MessageEmbed()
             .setTitle(`${message.author.username}'s PP Result`)
             .setDescription(`PP Size Is ${result.data.msg}`)
-            .setFooter("Powered By ItsukiAPI");
+            .setFooter("Powered By TextAPI");
 
             return send(message, {embeds: [embed] });
         }
@@ -32,7 +32,8 @@ export class UserCommand extends Command {
         const embed = new MessageEmbed()
         .setTitle(`${member.user.username}'s PP Result`)
         .setDescription(`PP Size Is ${result.data.msg}`)
-        .setFooter("Powered By ItsukiAPI");
+        .setFooter("Powered By TextAPI");
+
 
         return send(message, {embeds: [embed] });
 	}

@@ -19,13 +19,13 @@ let UserCommand = class UserCommand extends framework_1.Command {
             const embed = new discord_js_1.MessageEmbed()
                 .setTitle(`${message.author.username}'s PP Result`)
                 .setDescription(`PP Size Is ${result.data.msg}`)
-                .setFooter("Powered By ItsukiAPI");
+                .setFooter("Powered By TextAPI");
             return (0, plugin_editable_commands_1.send)(message, { embeds: [embed] });
         }
         const embed = new discord_js_1.MessageEmbed()
             .setTitle(`${member.user.username}'s PP Result`)
             .setDescription(`PP Size Is ${result.data.msg}`)
-            .setFooter("Powered By ItsukiAPI");
+            .setFooter("Powered By TextAPI");
         return (0, plugin_editable_commands_1.send)(message, { embeds: [embed] });
     }
 };

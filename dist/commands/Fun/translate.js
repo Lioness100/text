@@ -32,7 +32,7 @@ let UserCommand = class UserCommand extends framework_1.Command {
         const embed = new discord_js_1.MessageEmbed()
             .setTitle(`Translated From ${langfrom} To ${langto}`)
             .setDescription(`\`\`\`${result.data.target.text}\`\`\``)
-            .setFooter(`Powered By ItsukiAPI || Latency: ${result.data.times.total_time}`);
+            .setFooter(`Powered By TextAPI || Latency: ${result.data.times.total_time}`);
         return (0, plugin_editable_commands_1.send)(message, { embeds: [embed] });
     }
 };

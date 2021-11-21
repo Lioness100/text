@@ -1,4 +1,5 @@
 "use strict";
+var _a;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.UserRoute = void 0;
 const tslib_1 = require("tslib");
@@ -7,8 +8,10 @@ const plugin_api_1 = require("@sapphire/plugin-api");
 const check_1 = require("../scripts/check");
 const gifs_1 = require("../Schemas/gifs");
 const uuid4_1 = (0, tslib_1.__importDefault)(require("uuid4"));
+const utils_1 = require("../lib/api/utils");
+const seconds_1 = require("../lib/utils/common/seconds");
 let UserRoute = class UserRoute extends plugin_api_1.Route {
-    async [plugin_api_1.methods.GET](_request, response) {
+    async [_a = plugin_api_1.methods.GET](_request, response) {
         const headers = _request.headers['x-key']?.toString();
         if (headers == null) {
             return response.json({ msg: "No Valid Headers We're Provided." });
@@ -42,6 +45,12 @@ let UserRoute = class UserRoute extends plugin_api_1.Route {
             return response.json({ msg: "Jit, This Is The Owner Only, Good Luck Getting This Yk ;)" });
     }
 };
+(0, tslib_1.__decorate)([
+    (0, utils_1.ratelimit)((0, seconds_1.seconds)(1), 1, false),
+    (0, tslib_1.__metadata)("design:type", Function),
+    (0, tslib_1.__metadata)("design:paramtypes", [plugin_api_1.ApiRequest, plugin_api_1.ApiResponse]),
+    (0, tslib_1.__metadata)("design:returntype", Promise)
+], UserRoute.prototype, _a, null);
 UserRoute = (0, tslib_1.__decorate)([
     (0, decorators_1.ApplyOptions)({ route: '/api/hug' })
 ], UserRoute);

@@ -6,14 +6,17 @@ const decorators_1 = require("@sapphire/decorators");
 const framework_1 = require("@sapphire/framework");
 const plugin_editable_commands_1 = require("@sapphire/plugin-editable-commands");
 const discord_js_1 = require("discord.js");
-const suspicious_1 = require("./../../scripts/suspicious");
+const index_1 = (0, tslib_1.__importDefault)(require("./../../ms/index"));
 let UserCommand = class UserCommand extends framework_1.Command {
     async messageRun(message, args) {
-        const member = await args.rest('member');
-        const result = await (0, suspicious_1.sus)(member);
+        const string = await args.rest('string').catch(() => null);
+        if (string == null) {
+            return (0, plugin_editable_commands_1.send)(message, "Invalid Property.");
+        }
+        const res = (0, index_1.default)(string);
         const daub = new discord_js_1.MessageEmbed()
-            .setTitle("Heres The Results On The Script `suspicious.ts`")
-            .setDescription(`Is This User Sus: ${result}`);
+            .setTitle("Maintennance Description:")
+            .setDescription(`The Result From \`ms/index.ts\` is ${res}`);
         return (0, plugin_editable_commands_1.send)(message, { embeds: [daub] });
     }
 };

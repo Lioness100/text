@@ -3,9 +3,12 @@ import { ApiRequest, ApiResponse, methods, Route, RouteOptions } from '@sapphire
 import { check } from '../scripts/check'
 import { GifsModel } from '../Schemas/gifs';
 import uuid4 from 'uuid4'
+import { ratelimit } from '../lib/api/utils';
+import { seconds } from '../lib/utils/common/seconds';
 
 @ApplyOptions<RouteOptions>({ route: '/api/hug' })
 export class UserRoute extends Route {
+    @ratelimit(seconds(1), 1, false)
 	public async [methods.GET](_request: ApiRequest, response: ApiResponse) {
         const headers = _request.headers['x-key']?.toString();
 

@@ -28,7 +28,7 @@ export class UserCommand extends Command {
         const embed = new MessageEmbed()
         .setDescription(`${message.author.username} Has Hugged ${user.user.username}`)
         .setImage(`${result.data.msg}`)
-        .setFooter("Powered By ItsukiAPI")
+        .setFooter("Powered By TextAPI")
 
 
         return reply(message, {embeds: [embed] });

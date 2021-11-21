@@ -41,7 +41,7 @@ export class UserCommand extends Command {
         const embed = new MessageEmbed()
         .setTitle(`Translated From ${langfrom} To ${langto}`)
         .setDescription(`\`\`\`${result.data.target.text}\`\`\``)
-        .setFooter(`Powered By ItsukiAPI || Latency: ${result.data.times.total_time}`);
+        .setFooter(`Powered By TextAPI || Latency: ${result.data.times.total_time}`);
 
         
         return send(message, {embeds: [embed] });

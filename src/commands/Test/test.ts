@@ -3,7 +3,7 @@ import { Args, Command, CommandOptions } from '@sapphire/framework';
 import { send } from '@sapphire/plugin-editable-commands';
 import type { Message } from 'discord.js';
 import { MessageEmbed } from 'discord.js';
-import { sus } from './../../scripts/suspicious';
+import text_ms, { StringValue } from './../../ms/index'
 
 @ApplyOptions<CommandOptions>({
 	name: 'test',
@@ -11,14 +11,18 @@ import { sus } from './../../scripts/suspicious';
 })
 export class UserCommand extends Command {
 	public async messageRun(message: Message, args: Args) {
-        const member = await args.rest( 'member' );
+        const string = await args.rest( 'string' ).catch(() => null) as StringValue
 
-        const result = await sus(member);
+		if(string == null){
+			return send(message, "Invalid Property.");
+		}
 
+        
+		const res = text_ms(string)
 		
 		const daub = new MessageEmbed()
-        .setTitle("Heres The Results On The Script `suspicious.ts`")
-        .setDescription(`Is This User Sus: ${result}`);
+        .setTitle("Maintennance Description:")
+		.setDescription(`The Result From \`ms/index.ts\` is ${res}`);
 
 		return send(message, {embeds: [daub] });
 	}

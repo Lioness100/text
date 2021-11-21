@@ -1,15 +1,9 @@
-import type { PieceContext } from '@sapphire/framework';
+import { ApplyOptions } from '@sapphire/decorators';
 import { ApiRequest, ApiResponse, methods, Route, RouteOptions } from '@sapphire/plugin-api';
 import { check } from '../scripts/check'
 
+@ApplyOptions<RouteOptions>({ route: '/api/pp' })
 export class UserRoute extends Route {
-	public constructor(context: PieceContext, options?: RouteOptions) {
-		super(context, {
-			...options,
-			route: '/api/pp'
-		});
-	}
-
 	public async [methods.GET](_request: ApiRequest, response: ApiResponse) {
 		const headers = _request.headers['x-key']?.toString();
 

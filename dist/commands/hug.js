@@ -21,7 +21,7 @@ let UserCommand = class UserCommand extends framework_1.Command {
         const embed = new discord_js_1.MessageEmbed()
             .setDescription(`${message.author.username} Has Hugged ${user.user.username}`)
             .setImage(`${result.data.msg}`)
-            .setFooter("Powered By ItsukiAPI");
+            .setFooter("Powered By TextAPI");
         return (0, plugin_editable_commands_1.reply)(message, { embeds: [embed] });
     }
 };

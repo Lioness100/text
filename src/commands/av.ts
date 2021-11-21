@@ -27,6 +27,6 @@ export class UserCommand extends Command {
         .setDescription(`User Tag: \`${member.user.tag}\` \n User ID: \`${member.id}\``)
         .setImage(member.displayAvatarURL({size: 4096}));
 
-		return send(message, {embeds: [embed] });
+		return send(message, {embeds: [embed] });   
 	}
 }

@@ -8,9 +8,10 @@ import '@sapphire/plugin-api/register';
 
 
 const client = new SapphireClient({
+	defaultPrefix: 'i!',
 	fetchPrefix: async (message: Message) => {
-		const guild = await GuildModel.findOne({ _id: `${message.guildId}` }).lean()
 
+		const guild = await GuildModel.findOne({ _id: message.guildId ?? '0' }).lean()
 
 		const prefix = guild?.prefix ?? 'i!'
 
@@ -18,10 +19,10 @@ const client = new SapphireClient({
 	},
 	api: {
 	auth: {
-		id: '824331917402832946',
-		secret: 'zLufWOReeG-xTLurtkwIXM-xOrN4ZVff',
-		cookie: 'ITSUKI_AUTH',
-		redirect: 'itsuki.dev/home',
+		id: `${process.env.client_id}`,
+		secret: `${process.env.client_secret}`,
+		cookie: 'TEXT_AUTH',
+		redirect: 'textbot.ovh/dash',
 		scopes: ['identity'],
 		transformers: []
 	},

@@ -1,15 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.UserRoute = void 0;
+const tslib_1 = require("tslib");
+const decorators_1 = require("@sapphire/decorators");
 const plugin_api_1 = require("@sapphire/plugin-api");
 const check_1 = require("../scripts/check");
-class UserRoute extends plugin_api_1.Route {
-    constructor(context, options) {
-        super(context, {
-            ...options,
-            route: '/api/pp'
-        });
-    }
+let UserRoute = class UserRoute extends plugin_api_1.Route {
     async [plugin_api_1.methods.GET](_request, response) {
         const headers = _request.headers['x-key']?.toString();
         if (headers == null) {
@@ -30,6 +26,9 @@ class UserRoute extends plugin_api_1.Route {
     [plugin_api_1.methods.POST](_request, response) {
         response.json({ message: 'Hello World' });
     }
-}
+};
+UserRoute = (0, tslib_1.__decorate)([
+    (0, decorators_1.ApplyOptions)({ route: '/api/pp' })
+], UserRoute);
 exports.UserRoute = UserRoute;
 //# sourceMappingURL=pp.js.map
